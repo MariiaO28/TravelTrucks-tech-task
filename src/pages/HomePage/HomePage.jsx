@@ -6,9 +6,7 @@ export default function HomePage() {
         <div className={css.container}>
             <h1 className={css.header}>Campers of your dreams</h1>
             <h2 className={css.subtext}>You can find everything you want in our catalog</h2>
-            <button className={css.button}>
-                <NavLink to='/catalog'>View Now</NavLink>
-            </button>
+            <NavLink to='/catalog' className={css.button} >View Now</NavLink>
         </div>
     )
 };

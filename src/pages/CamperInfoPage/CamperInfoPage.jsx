@@ -8,8 +8,8 @@ import { selectLoading, selectError, selectCamperById } from '../../redux/camper
 import CamperInfo from '../../components/CamperInfo/CamperInfo';
 import CamperFeatures from '../../components/CamperFeatures/CamperFeatures';
 import CamperReviews from '../../components/CamperReviews/CamperReviews';
-import clsx from 'clsx'
-import css from './CamperInfoPage.module.css'
+import clsx from 'clsx';
+import css from './CamperInfoPage.module.css';
 
 export default function CamperInfoPage() {
     const {id} = useParams();

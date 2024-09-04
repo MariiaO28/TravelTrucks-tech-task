@@ -8,9 +8,12 @@ const activeClass = ({isActive}) => {
 
 export default function Navigation() {
     return (
-        <nav className={css.navigation} > 
+        <div className={css.container}>
+          <p className={css.travel}>Travel<span className={css.trucks}>Trucks</span></p>
+         <nav className={css.navigation} > 
           <NavLink to='/' className={activeClass}>Home</NavLink>
           <NavLink to='/catalog' className={activeClass}>Catalog</NavLink>
-        </nav>
+         </nav>
+        </div>
     )
 };

@@ -1,0 +1,14 @@
+.list {
+    display: flex;
+    gap: 48px;
+    list-style: none;
+}
+
+.photo {
+    display: block;
+    border-radius: 10px;
+}
+
+.star {
+    color: var(--starts-color);
+}

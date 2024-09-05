@@ -17,12 +17,14 @@ export default function CamperInfo({camper: {name, rating, reviews, location, pr
 
     return (
         <div className={css.container}>
-            <h2>{name}</h2>
-            <p><TiStar className={css.star}/>{rating} {`(${reviews?.length || 0} reviews)`}</p>
-            <p><CiMap /> {location}</p>
-            <h2>{`€${price.toFixed(2)}`}</h2>
+            <h2 className={css.name}>{name}</h2>
+            <div className={css.secondaryInfo}>
+               <p className={css.reviews}><TiStar className={css.star}/>{rating} {`(${reviews?.length || 0} reviews)`}</p>
+               <p className={css.location}><CiMap  className={css.map}/> {location}</p>
+            </div>
+            <h2 className={css.price}>{`€${price.toFixed(2)}`}</h2>
             <ul className={css.list}>
-                {gallery && gallery.length > 0 ? (
+                {gallery.length > 0 ? (
                     gallery.map((photo, index) => (
                    <li key={index} className={css.card}>
                         <img 
@@ -39,7 +41,7 @@ export default function CamperInfo({camper: {name, rating, reviews, location, pr
                     <p> No photos available</p>
                 )}
             </ul>
-            <p>{description}</p>
+            <p className={css.description}>{description}</p>
     
             {activePhoto && (
                 <div className={css.modal} onClick={closeModal}>

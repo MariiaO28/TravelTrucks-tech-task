@@ -1,3 +1,44 @@
 .container {
     padding: 48px 64px;
 }
+
+.list {
+    display: flex;
+    gap: 40px;
+    margin-top: 60px;
+    list-style: none;
+    position: relative;
+}
+
+.link {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    color: var(--main-text-color);
+    position: relative;
+}
+
+.list::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color:var(--secondary-logo-color);
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+} 
+
+ .active::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    bottom: -26px;
+    left: 0;
+    background-color: var(--button-color);
+    z-index: 99999;
+}

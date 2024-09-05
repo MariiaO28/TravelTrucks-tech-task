@@ -1,0 +1,45 @@
+.container {
+    width: 631px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 44px;
+    padding: 44px 52px;
+    background-color: var(--inputs-background-color);
+    border-radius: 10px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+}
+
+.featureItem {
+    display: flex;
+    padding: 12px 18px;
+    gap: 8px;
+    align-items: center;
+    background-color: var(--header-background-color);
+    border: 1px solid transparent;
+    border-radius: 100px;
+    font-family: "Inter", sans-serif;
+    color: var(--main-text-color);
+}
+
+.header {
+    margin-top: 100px;
+}
+
+.characteristics {
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    gap: 16px;
+    list-style: none;
+}
+
+.charItem {
+    display: flex;
+    justify-content: space-between;
+}

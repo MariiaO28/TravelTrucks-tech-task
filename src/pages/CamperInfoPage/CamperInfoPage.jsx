@@ -6,8 +6,6 @@ import Loader from '../../components/Loader/Loader';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import { selectLoading, selectError, selectCamperById } from '../../redux/campers/selectors';
 import CamperInfo from '../../components/CamperInfo/CamperInfo';
-import CamperFeatures from '../../components/CamperFeatures/CamperFeatures';
-import CamperReviews from '../../components/CamperReviews/CamperReviews';
 import clsx from 'clsx';
 import css from './CamperInfoPage.module.css';
 
@@ -39,10 +37,10 @@ export default function CamperInfoPage() {
         }
         <ul className={css.list}>
             <li>
-                <NavLink to='features' className={activeClass}><CamperFeatures/></NavLink>
+                <NavLink to='features' className={activeClass}>Features</NavLink>
             </li>
             <li>
-                <NavLink to='reviews' className={activeClass}><CamperReviews/></NavLink>
+                <NavLink to='reviews' className={activeClass}>Reviews</NavLink>
             </li>
         </ul> 
         <Suspense  fallback={<Loader />}>

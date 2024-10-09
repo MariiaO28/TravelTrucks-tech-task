@@ -19,6 +19,7 @@ export default function App() {
               <Route path='features' element={<CamperFeatures/>}></Route>
               <Route path='reviews' element={<CamperReviews/>}></Route>
           </Route>
+          {/* <Route path='/favourite' element={<Fvou}></Route> */}
           <Route path='*' element={<NotFoundPage/>}></Route>
         </Routes>
       </Layout>

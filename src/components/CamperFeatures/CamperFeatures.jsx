@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import { selectCamperById } from '../../redux/campers/selectors';
 import { BsWind, BsDiagram3, BsCupHot, BsDroplet, BsFuelPump, BsUiRadios } from "react-icons/bs";
 import { MdTv } from "react-icons/md";
+import formatName from '../../index.js';
 import css from './CamperFeatures.module.css';
 
 export default function CamperFeatures() {
@@ -11,6 +12,7 @@ export default function CamperFeatures() {
         return <p>No camper information available.</p>;
     }
 
+    // Move to index.js
     const features = [
         { name: 'Automatic', value: camper.transmission === 'automatic', icon: <BsDiagram3 /> },
         { name: 'Petrol', value: camper.engine === 'petrol', icon: <BsFuelPump/> },
@@ -20,7 +22,8 @@ export default function CamperFeatures() {
         { name: 'TV', value: camper.TV, icon: <MdTv /> },
         { name: 'Radio', value: camper.radio, icon: <BsUiRadios /> },
     ];
-
+    
+    // Move to index.js
     const characteristics = [
         {name: 'Form', value: camper.form},
         {name: 'Length', value: camper.length},
@@ -29,12 +32,6 @@ export default function CamperFeatures() {
         {name: 'Tank', value: camper.tank},
         {name: 'Consumption', value: camper.consumption},
     ]
-
-    // function formatName(name) {
-    //     return name
-    //         .replace(/([a-z])([A-Z])/g, '$1 $2')  // Додає пробіл між малими і великими літерами
-    //         .replace(/^./, str => str.toUpperCase());  // Робить першу букву великою
-    // }
 
     return (
         <div className={css.container}>
@@ -53,7 +50,7 @@ export default function CamperFeatures() {
                 characteristic.value && (
                     <li key={index} className={css.charItem}>
                         <span className={css.charName}>{characteristic.name}</span>
-                        <span className={css.charValue}>{characteristic.value}</span>
+                        <span className={css.charValue}>{formatName(characteristic.value)}</span>
                     </li>
                 )
                 )}

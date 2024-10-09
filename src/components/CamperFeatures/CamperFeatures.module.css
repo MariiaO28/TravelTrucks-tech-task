@@ -20,7 +20,7 @@
     padding: 12px 18px;
     gap: 8px;
     align-items: center;
-    background-color: var(--header-background-color);
+    background-color: #E5E5E5;
     border: 1px solid transparent;
     border-radius: 100px;
     font-family: "Inter", sans-serif;
@@ -29,12 +29,25 @@
 
 .header {
     margin-top: 100px;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.header::after {
+    width: 100%;
+    margin-top: 24px;
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: var(--secondary-logo-color);
 }
 
 .characteristics {
     display: flex;
     flex-direction: column;
-    margin-top: 48px;
+    margin-top: 24px;
     gap: 16px;
     list-style: none;
 }

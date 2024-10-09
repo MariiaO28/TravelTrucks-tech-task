@@ -31,7 +31,7 @@ export default function CamperInfo({camper: {name, rating, reviews, location, pr
                             src={photo.thumb} 
                             alt={name} 
                             className={css.photo}
-                            width='292px'
+                            width='416px'
                             height='312px'
                             onClick={() => openModal(photo.original)}
                          />

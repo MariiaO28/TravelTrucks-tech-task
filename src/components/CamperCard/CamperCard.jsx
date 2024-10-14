@@ -3,7 +3,7 @@ import { CiMap } from 'react-icons/ci';
 import { BsSuitHeart, BsWind, BsDiagram3, BsCupHot, BsDroplet, BsFuelPump, BsUiRadios } from "react-icons/bs";
 import { MdTv } from "react-icons/md";
 import { Link } from 'react-router-dom';
-import clsx from "clsx";
+import clsx from 'clsx';
 import css from './CamperCard.module.css';
 
 export default function CamperCard({camper: {id, name, rating, reviews, location, price, gallery, description, transmission, AC, bathroom, kitchen, TV, radio, engine}}) 
